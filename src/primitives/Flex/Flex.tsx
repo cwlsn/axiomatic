@@ -1,35 +1,20 @@
 import styled from 'styled-components';
 import {
-  alignItems,
-  alignContent,
-  justifyItems,
-  justifyContent,
+  flex,
   flexWrap,
   flexDirection,
-  flex,
-  flexGrow,
-  flexShrink,
-  flexBasis,
-  justifySelf,
-  alignSelf,
+  alignItems,
+  justifyContent,
 } from 'styled-system';
 import Box from '../Box';
 import { themed } from '../../utils/theme';
 
 const Flex = styled(Box)(
-  {},
-  alignItems,
-  alignContent,
-  justifyItems,
-  justifyContent,
+  flex,
   flexWrap,
   flexDirection,
-  flex,
-  flexGrow,
-  flexShrink,
-  flexBasis,
-  justifySelf,
-  alignSelf,
+  alignItems,
+  justifyContent,
   themed('Flex')
 );
 

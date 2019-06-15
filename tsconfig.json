@@ -18,10 +18,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "rules": {
-      "defaultSeverity": "warning"
-    },
+    "jsx": "preserve"
+  },
+  "rules": {
+    "defaultSeverity": "warning"
   },
   "include": [
     "src"

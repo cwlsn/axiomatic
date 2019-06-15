@@ -1,35 +1,23 @@
 import styled from 'styled-components';
 import {
   space,
-  color,
   width,
-  height,
-  display,
-  minWidth,
-  minHeight,
-  maxWidth,
-  maxHeight,
   fontSize,
   fontFamily,
+  color,
+  order,
+  alignSelf,
 } from 'styled-system';
 import { themed } from '../../utils/theme';
 
-const Box = styled.div(
-  {
-    boxSizing: 'border-box',
-    fontFamily: props => props.theme.fonts.copy,
-  },
+const Box = styled.div.attrs({ fontFamily: 'serif' })(
   space,
-  color,
   width,
-  height,
-  display,
-  minWidth,
-  minHeight,
-  maxWidth,
-  maxHeight,
   fontSize,
   fontFamily,
+  color,
+  order,
+  alignSelf,
   themed('Box')
 );
 
