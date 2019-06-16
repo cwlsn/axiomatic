@@ -3,7 +3,7 @@ import Text from '../Text';
 import { themed } from '../../utils/theme';
 
 export interface LinkProps {
-  href: string;
+  href?: string;
 }
 
 export interface AdditionalLinkProps {
@@ -12,9 +12,9 @@ export interface AdditionalLinkProps {
 }
 
 const Link = styled(Text).attrs<AdditionalLinkProps>(
-  ({ as = 'a', color = 'primary' }) => ({
+  ({ color = 'primary' }) => ({
+    color,
     as: 'a',
-    color: 'primary',
   })
 )<LinkProps>`
   ${themed('Link')}

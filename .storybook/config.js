@@ -1,6 +1,7 @@
-import { configure, addDecorator } from '@storybook/react';
+import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import defaultTheme from '../src/themes/default';
+import sbTheme from './theme.js';
 import './reset.css';
 
 const themes = [defaultTheme];
@@ -12,5 +13,11 @@ function loadStories() {
 }
 
 addDecorator(withThemesProvider(themes));
+
+addParameters({
+  options: {
+    theme: sbTheme,
+  },
+});
 
 configure(loadStories, module);
