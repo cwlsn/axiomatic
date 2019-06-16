@@ -9,7 +9,7 @@ import {
 import Box from '../Box';
 import { themed } from '../../utils/theme';
 
-const Flex = styled(Box)(
+const Flex = styled(Box).attrs({ display: 'flex' })(
   flex,
   flexWrap,
   flexDirection,

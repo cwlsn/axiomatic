@@ -10,15 +10,8 @@ import {
 } from 'styled-system';
 import { themed } from '../../utils/theme';
 
-const Box = styled.div.attrs({ fontFamily: 'serif' })(
-  space,
-  width,
-  fontSize,
-  fontFamily,
-  color,
-  order,
-  alignSelf,
-  themed('Box')
-);
+const Box = styled.div.attrs(({ fontFamily }) => ({
+  fontFamily: fontFamily || 'serif',
+}))(space, width, fontSize, fontFamily, color, order, alignSelf, themed('Box'));
 
 export default Box;
