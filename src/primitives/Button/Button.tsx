@@ -5,32 +5,69 @@ import {
   borderColor,
   borderRadius,
   buttonStyle,
+  FontWeightProps,
+  BordersProps,
+  BorderColorProps,
+  BorderRadiusProps,
+  ButtonStyleProps,
   variant,
 } from 'styled-system';
 import Box from '../Box';
 import { themed } from '../../utils/theme';
 
+export interface CombinedButtonProps
+  extends FontWeightProps,
+    BordersProps,
+    BorderColorProps,
+    BorderRadiusProps,
+    ButtonStyleProps {}
+
+export interface AdditionalButtonProps {
+  as?: string;
+  fontSize?: number;
+  px?: number;
+  py?: number;
+  borderRadius?: number;
+  border?: number;
+  variant?: 'primary' | 'secondary' | 'outline';
+}
+
 const buttons = variant({ key: 'buttons' });
 
-const Button = styled(Box).attrs(({ variant, border, borderRadius }) => ({
-  as: 'button',
-  variant: variant || 'primary',
-  appearance: 'none',
-  display: 'inline-block',
-  textAlign: 'center',
-  lineHeight: 'inherit',
-  textDecoration: 'none',
-  fontSize: 'inherit',
-  border: border || 1,
-  borderRadius: borderRadius || 1,
-}))(
-  fontWeight,
-  borders,
-  borderColor,
-  borderRadius,
-  buttonStyle,
-  buttons,
-  themed('Button')
-);
+const Button = styled(Box).attrs<AdditionalButtonProps>(
+  ({
+    as = 'button',
+    fontSize = 1,
+    px = 3,
+    py = 2,
+    borderRadius = 1,
+    border = 1,
+    variant = 'primary',
+  }) => ({
+    as,
+    fontSize,
+    px,
+    py,
+    borderRadius,
+    border,
+    variant,
+  })
+)<CombinedButtonProps>`
+  appearance: none;
+  display: inline-block;
+  text-align: center;
+  line-height: inherit;
+  text-decoration: none;
+  font-family: ${({ theme }) => theme.fonts.serif};
+  font-weight: bold;
+
+  ${fontWeight}
+  ${borders}
+  ${borderColor}
+  ${borderRadius}
+  ${buttonStyle}
+  ${buttons}
+  ${themed('Button')}
+`;
 
 export default Button;

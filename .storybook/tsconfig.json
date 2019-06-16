@@ -1,3 +1,6 @@
 {
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "rules": {
+        "defaultSeverity": "warning"
+    },
 }

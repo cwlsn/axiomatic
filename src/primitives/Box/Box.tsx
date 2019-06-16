@@ -2,16 +2,30 @@ import styled from 'styled-components';
 import {
   space,
   width,
-  fontSize,
-  fontFamily,
   color,
-  order,
-  alignSelf,
+  textAlign,
+  SpaceProps,
+  WidthProps,
+  ColorProps,
+  TextAlignProps,
+  Theme,
 } from 'styled-system';
 import { themed } from '../../utils/theme';
 
-const Box = styled.div.attrs(({ fontFamily }) => ({
-  fontFamily: fontFamily || 'serif',
-}))(space, width, fontSize, fontFamily, color, order, alignSelf, themed('Box'));
+export type CombinedBoxProps = Theme &
+  SpaceProps &
+  WidthProps &
+  ColorProps &
+  TextAlignProps;
+
+const Box = styled.div<CombinedBoxProps>`
+  font-family: ${({ theme }) => theme.fonts.serif};
+
+  ${space}
+  ${width}
+  ${color}
+  ${textAlign} 
+  ${themed('Box')}
+`;
 
 export default Box;

@@ -1,5 +1,3 @@
-import { color, borderColor } from 'styled-system';
-
 const colors = {
   primary: ['#1181c6'],
   secondary: ['#a03983'],

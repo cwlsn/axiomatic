@@ -1,12 +1,19 @@
 import React from 'react';
 import Card from './Card';
 import { renderJSON } from '../../utils/tests';
+import defaultTheme from '../../themes/default';
 import 'jest-styled-components';
 
 describe('Card', () => {
   test('renders', () => {
     const json = renderJSON(
-      <Card p={3} bg="tomato" borderRadius={8} boxShadow="0 0 48px tomato" />
+      <Card
+        p={3}
+        bg="tomato"
+        borderRadius={8}
+        boxShadow="0 0 48px tomato"
+        theme={defaultTheme}
+      />
     );
     expect(json.type).toBe('div');
     expect(json).toHaveStyleRule('padding', '16px');
