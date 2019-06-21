@@ -44,7 +44,7 @@ export interface AdditionalCardProps {
 const cards = variant({ key: 'cards' });
 
 const Card = styled(Box).attrs<AdditionalCardProps>(
-  ({ borderRadius = 1, p = 3, boxShadow = 'small', bg = 'white' }) => ({
+  ({ borderRadius = 1, p = 4, boxShadow = 'small', bg = 'white' }) => ({
     borderRadius,
     p,
     boxShadow,

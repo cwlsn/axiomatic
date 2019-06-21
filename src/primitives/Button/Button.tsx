@@ -35,22 +35,14 @@ export interface AdditionalButtonProps {
 const buttons = variant({ key: 'buttons' });
 
 const Button = styled(Box).attrs<AdditionalButtonProps>(
-  ({
-    as = 'button',
-    fontSize = 1,
-    px = 3,
-    py = 2,
-    borderRadius = 1,
-    border = 1,
-    variant = 'primary',
-  }) => ({
+  ({ as = 'button', borderRadius = 1, border = 1, variant = 'primary' }) => ({
     as,
-    fontSize,
-    px,
-    py,
     borderRadius,
     border,
     variant,
+    px: 3,
+    py: 2,
+    fontSize: 2,
   })
 )<CombinedButtonProps>`
   appearance: none;
@@ -60,6 +52,7 @@ const Button = styled(Box).attrs<AdditionalButtonProps>(
   text-decoration: none;
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: bold;
+  cursor: pointer;
 
   ${fontWeight}
   ${borders}
