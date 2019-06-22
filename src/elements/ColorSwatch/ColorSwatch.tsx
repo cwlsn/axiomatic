@@ -13,9 +13,12 @@ const Swatch = styled(Card)`
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: rotate(-3deg);
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.3);
+    z-index: 1000;
+    box-shadow: ${({ theme }) => theme.shadows.large};
     color: ${({ theme, bg }) =>
       lightOrDarkColor(bg, theme.colors.white, theme.colors.gray[0])};
   }
@@ -40,8 +43,8 @@ function ColorSwatch({ color, name }) {
     <Swatch
       bg={color}
       p={0}
-      width={160}
-      m={2}
+      width={120}
+      mx={-1}
       onClick={() => {
         copy(color);
       }}

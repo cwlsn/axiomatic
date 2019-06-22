@@ -7,8 +7,8 @@ import ColorSwatch from './ColorSwatch';
 
 const keys = Object.keys(defaultTheme.colors);
 storiesOf('Elements/ColorSwatch', module).add('Colors', () => (
-  <Flex bg="white" p={4} flexWrap="wrap" flexDirection="column">
-    <Box mx={2}>
+  <Flex bg="white" p={5} flexWrap="wrap" flexDirection="column">
+    <Box>
       <Typography.EyebrowText>Color Swatch Library</Typography.EyebrowText>
       <Typography.Heading as="h1">Axiomatic Colors</Typography.Heading>
       <Typography.Paragraph>
@@ -20,9 +20,9 @@ storiesOf('Elements/ColorSwatch', module).add('Colors', () => (
       const value = defaultTheme.colors[color];
       if (Array.isArray(value)) {
         return (
-          <Flex flexDirection="column" p={2} pb={4}>
+          <Flex flexDirection="column" pb={4}>
             <Typography.EyebrowText>{color}</Typography.EyebrowText>
-            <Flex mx={-2}>
+            <Flex mt={2}>
               {value.map((subColor, i) => (
                 <ColorSwatch color={subColor} name={`${color}.${i}`} />
               ))}
