@@ -1,3 +1,10 @@
+import {
+  FaCheckCircle,
+  FaExclamationCircle,
+  FaInfoCircle,
+  FaTimesCircle,
+} from 'react-icons/fa';
+
 export const themed = key => props => props.theme[key];
 
 export const lightOrDarkColor = (bgColor, lightColor, darkColor) => {
@@ -14,4 +21,19 @@ export const lightOrDarkColor = (bgColor, lightColor, darkColor) => {
   });
   const L = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
   return L > 0.3 ? darkColor : lightColor;
+};
+
+export const renderIcon = (status: string): JSX.Element => {
+  // This is a weird workaround
+  switch (status) {
+    case 'info':
+    default:
+      return FaInfoCircle({});
+    case 'warning':
+      return FaExclamationCircle({});
+    case 'success':
+      return FaCheckCircle({});
+    case 'error':
+      return FaTimesCircle({});
+  }
 };
