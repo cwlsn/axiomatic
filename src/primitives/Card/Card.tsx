@@ -9,6 +9,7 @@ import {
   backgroundPosition,
   backgroundRepeat,
   opacity,
+  colorStyle,
   variant,
   BordersProps,
   BorderColorProps,
@@ -19,6 +20,7 @@ import {
   BackgroundPositionProps,
   BackgroundRepeatProps,
   OpacityProps,
+  ColorStyleProps,
 } from 'styled-system';
 import Box from '../Box';
 import { themed } from '../../utils/theme';
@@ -32,7 +34,10 @@ export interface CombinedCardProps
     BackgroundSizeProps,
     BackgroundPositionProps,
     BackgroundRepeatProps,
-    OpacityProps {}
+    OpacityProps,
+    ColorStyleProps {
+  colors?: string;
+}
 
 export interface AdditionalCardProps {
   borderRadius?: number;
@@ -60,6 +65,7 @@ const Card = styled(Box).attrs<AdditionalCardProps>(
   ${backgroundPosition}
   ${backgroundRepeat}
   ${opacity}
+  ${colorStyle}
   ${cards}
   ${themed('Card')}
 `;

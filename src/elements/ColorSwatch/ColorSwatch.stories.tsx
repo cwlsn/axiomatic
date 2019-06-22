@@ -6,8 +6,8 @@ import { Typography } from '../../elements';
 import ColorSwatch from './ColorSwatch';
 
 const keys = Object.keys(defaultTheme.colors);
-storiesOf('Primitives/ColorSwatch', module).add('Colors', () => (
-  <Flex bg="gray.4" p={4} flexWrap="wrap" flexDirection="column">
+storiesOf('Elements/ColorSwatch', module).add('Colors', () => (
+  <Flex bg="white" p={4} flexWrap="wrap" flexDirection="column">
     <Box mx={2}>
       <Typography.EyebrowText>Color Swatch Library</Typography.EyebrowText>
       <Typography.Heading as="h1">Axiomatic Colors</Typography.Heading>

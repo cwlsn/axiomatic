@@ -20,7 +20,7 @@ storiesOf('Patterns/EmptyState', module)
     </Box>
   ))
   .add('In a Card', () => (
-    <Box p={4} bg="gray.3">
+    <Box p={4} bg="gray.4">
       <Card width={400} m="auto">
         <EmptyState
           title="There's nothing here..."

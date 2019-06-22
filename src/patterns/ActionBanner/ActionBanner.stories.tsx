@@ -7,7 +7,7 @@ import ActionBanner from './ActionBanner';
 
 storiesOf('Patterns/ActionBanner', module)
   .add('Basic ActionBanner', () => (
-    <Box p={4} bg="gray.3">
+    <Box p={4} bg="gray.4">
       <ActionBanner
         eyebrowText="This is an ActionBanner!"
         title="Fun and Exciting Kay!"
@@ -21,7 +21,7 @@ storiesOf('Patterns/ActionBanner', module)
     </Box>
   ))
   .add('Basic ActionBanner Swapped Layout', () => (
-    <Box p={4} bg="gray.3">
+    <Box p={4} bg="gray.4">
       <ActionBanner
         eyebrowText="This is an ActionBanner!"
         title="Fun and Exciting Kay!"
@@ -34,7 +34,7 @@ storiesOf('Patterns/ActionBanner', module)
     </Box>
   ))
   .add('Stacked ActionBanner', () => (
-    <Box p={4} bg="gray.3">
+    <Box p={4} bg="gray.4">
       <ActionBanner
         eyebrowText="This is an ActionBanner!"
         title="Fun and Exciting Kay!"

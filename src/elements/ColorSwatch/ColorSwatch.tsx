@@ -32,7 +32,7 @@ const Title = styled(Box)`
   right: 0;
   bottom: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.9;
 `;
 
 function ColorSwatch({ color, name }) {

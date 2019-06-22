@@ -1,6 +1,6 @@
 const colors = {
   primary: ['#32235d', '#5F4B8B', '#8e77bb', '#c2b0e5', '#f3edff'],
-  secondary: ['#00766c', '#26a69a', '#64d8cb', '#bffcf6', '#e2fffc'],
+  secondary: ['#00546d', '#00a1ad', '#60dce5', '#a5f8ff', '#edfdff'],
   danger: ['#c14141', '#ffe0e0'],
   warning: ['#e0ca21', '#fcf8d9'],
   success: ['#60c140', '#edffe8'],
@@ -31,7 +31,7 @@ const defaultTheme = {
     small: '1px 2px 4px rgba(0, 0, 0, .1)',
     large: '3px 6px 24px rgba(0, 0, 0, .125)',
   },
-  borders: ['1px solid', '2px solid'],
+  borders: ['1px solid', '2px solid', '6px solid'],
   textStyles: {
     eyebrow: {
       textTransform: 'uppercase',
@@ -41,12 +41,12 @@ const defaultTheme = {
     h1: {
       fontSize: fontSizes[5],
       lineHeight: lineHeights[0],
-      color: colors.primary[1],
+      color: colors.primary[0],
     },
     h2: {
       fontSize: fontSizes[4],
       lineHeight: lineHeights[0],
-      color: colors.primary[2],
+      color: colors.primary[1],
     },
     h3: {
       fontSize: fontSizes[3],
@@ -67,6 +67,28 @@ const defaultTheme = {
       fontSize: fontSizes[0],
       lineHeight: lineHeights[0],
       color: colors.gray[2],
+    },
+  },
+  colorStyles: {
+    warning: {
+      backgroundColor: colors.warning[1],
+      borderColor: colors.warning[0],
+      color: colors.warning[0],
+    },
+    error: {
+      backgroundColor: colors.danger[1],
+      borderColor: colors.danger[0],
+      color: colors.danger[0],
+    },
+    info: {
+      backgroundColor: colors.info[1],
+      borderColor: colors.info[0],
+      color: colors.info[0],
+    },
+    success: {
+      backgroundColor: colors.success[1],
+      borderColor: colors.success[0],
+      color: colors.success[0],
     },
   },
   buttons: {
