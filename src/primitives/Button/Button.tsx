@@ -1,3 +1,4 @@
+import { MouseEvent } from 'react';
 import styled from 'styled-components';
 import {
   fontWeight,
@@ -20,7 +21,9 @@ export interface CombinedButtonProps
     BordersProps,
     BorderColorProps,
     BorderRadiusProps,
-    ButtonStyleProps {}
+    ButtonStyleProps {
+  onClick?: MouseEvent;
+}
 
 export interface AdditionalButtonProps {
   as?: string;

@@ -1,5 +1,7 @@
 import Paragraph from './Paragraph';
-// import Heading from './Heading';
-// import EyebrowText from './EyebrowText';
+import Heading from './Heading';
+import EyebrowText from './EyebrowText';
 
-export { Paragraph /*Heading, EyebrowText*/ };
+const Typography = { Paragraph, Heading, EyebrowText };
+
+export default Typography;
