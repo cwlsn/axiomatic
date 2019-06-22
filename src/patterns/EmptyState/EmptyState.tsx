@@ -18,7 +18,6 @@ function EmptyState({
   actionTitle,
   action,
   image,
-  swapLayout = false,
 }: ActionBannerProps) {
   return (
     <Flex justifyContent="center" alignItems="center" flexDirection="column">

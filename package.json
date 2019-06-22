@@ -9,6 +9,7 @@
     "@types/react-dom": "16.8.4",
     "@types/styled-components": "^4.1.16",
     "@types/styled-system": "^4.2.1",
+    "copy-to-clipboard": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",

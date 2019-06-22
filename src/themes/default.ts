@@ -1,9 +1,13 @@
 const colors = {
-  primary: ['#32235d', '#5F4B8B', '#8e77bb'],
-  secondary: ['#00766c', '#26a69a', '#64d8cb'],
+  primary: ['#32235d', '#5F4B8B', '#8e77bb', '#c2b0e5', '#f3edff'],
+  secondary: ['#00766c', '#26a69a', '#64d8cb', '#bffcf6', '#e2fffc'],
+  danger: ['#c14141', '#ffe0e0'],
+  warning: ['#e0ca21', '#fcf8d9'],
+  success: ['#60c140', '#edffe8'],
+  info: ['#3998e5', '#eaf5ff'],
+  gray: ['#23242e', '#56574f', '#9a9b90', '#c8c8c0', '#efefe9'],
   white: '#ffffff',
   black: '#000000',
-  gray: ['#23242e', '#56574f', '#9a9b90', '#c8c8c0', '#efefe9'],
 };
 
 const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
@@ -70,16 +74,27 @@ const defaultTheme = {
       backgroundColor: colors.primary[0],
       color: colors.white,
       borderColor: colors.primary[0],
+      '&:hover': {
+        backgroundColor: colors.primary[1],
+        borderColor: colors.primary[1],
+      },
     },
     outline: {
       backgroundColor: 'transparent',
       borderColor: colors.primary[0],
       color: colors.primary[0],
+      '&:hover': {
+        borderColor: colors.primary[1],
+      },
     },
     secondary: {
       backgroundColor: colors.secondary[0],
       color: colors.white,
       borderColor: colors.secondary[0],
+      '&:hover': {
+        backgroundColor: colors.secondary[1],
+        borderColor: colors.secondary[1],
+      },
     },
   },
 };

@@ -56,6 +56,7 @@ const Button = styled(Box).attrs<AdditionalButtonProps>(
   font-family: ${({ theme }) => theme.fonts.serif};
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   ${fontWeight}
   ${borders}
