@@ -1,8 +1,5 @@
 import styled from 'styled-components';
 import {
-  borders,
-  borderColor,
-  borderRadius,
   boxShadow,
   backgroundImage,
   backgroundSize,
@@ -11,9 +8,6 @@ import {
   opacity,
   colorStyle,
   variant,
-  BordersProps,
-  BorderColorProps,
-  BorderRadiusProps,
   BoxShadowProps,
   BackgroundImageProps,
   BackgroundSizeProps,
@@ -26,10 +20,7 @@ import Box from '../Box';
 import { themed } from '../../utils/theme';
 
 export interface CombinedCardProps
-  extends BordersProps,
-    BorderColorProps,
-    BorderRadiusProps,
-    BoxShadowProps,
+  extends BoxShadowProps,
     BackgroundImageProps,
     BackgroundSizeProps,
     BackgroundPositionProps,
@@ -56,9 +47,6 @@ const Card = styled(Box).attrs<AdditionalCardProps>(
     bg,
   })
 )<CombinedCardProps>`
-  ${borders}
-  ${borderColor}
-  ${borderRadius}
   ${boxShadow}
   ${backgroundImage}
   ${backgroundSize}

@@ -5,11 +5,13 @@ import {
   flexDirection,
   alignItems,
   justifyContent,
+  flexBasis,
   FlexProps,
   FlexWrapProps,
   FlexDirectionProps,
   AlignItemsProps,
   JustifyContentProps,
+  FlexBasisProps,
 } from 'styled-system';
 import Box from '../Box';
 import { themed } from '../../utils/theme';
@@ -19,7 +21,8 @@ export interface CombinedFlexProps
     FlexWrapProps,
     FlexDirectionProps,
     AlignItemsProps,
-    JustifyContentProps {}
+    JustifyContentProps,
+    FlexBasisProps {}
 
 const Flex = styled(Box)<CombinedFlexProps>`
   display: flex;
@@ -27,6 +30,7 @@ const Flex = styled(Box)<CombinedFlexProps>`
   ${flex}
   ${flexWrap}
   ${flexDirection}
+  ${flexBasis}
   ${alignItems}
   ${justifyContent}
   ${themed('Flex')}

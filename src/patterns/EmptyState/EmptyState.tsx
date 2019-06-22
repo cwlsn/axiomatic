@@ -1,5 +1,5 @@
-import React, { MouseEvent } from 'react';
-import { Flex, Box, Card, Button, Image } from '../../primitives';
+import React from 'react';
+import { Flex, Box, Button, Image } from '../../primitives';
 import { Typography } from '../../elements';
 
 export interface ActionBannerProps {

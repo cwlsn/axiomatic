@@ -33,13 +33,11 @@ export interface CombinedTextProps
   as?: string;
 }
 
-export interface AdditionalTextProps {
+export interface ATextProps {
   as?: string;
 }
 
-const Text = styled(Box).attrs<AdditionalTextProps>({ as: 'p' })<
-  CombinedTextProps
->`
+const Text = styled(Box).attrs<ATextProps>({ as: 'p' })<CombinedTextProps>`
   ${fontSize}
   ${fontStyle}
   ${fontFamily}

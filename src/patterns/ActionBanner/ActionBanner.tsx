@@ -1,4 +1,4 @@
-import React, { MouseEvent } from 'react';
+import React from 'react';
 import { Flex, Box, Card, Button, Image } from '../../primitives';
 import { Typography } from '../../elements';
 

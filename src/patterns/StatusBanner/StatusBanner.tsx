@@ -8,7 +8,7 @@ import {
 import { Card, Flex, Box, Text } from '../../primitives';
 
 export interface StatusBannerProps {
-  status?: string;
+  status?: any; // TODO
   message: string;
 }
 
