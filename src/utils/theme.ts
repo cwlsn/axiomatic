@@ -1,5 +1,6 @@
 import defaultTheme from '../themes/default';
-import { get } from 'lodash';
+import { get, first } from 'lodash';
+import colorable from 'colorable';
 import {
   FaCheckCircle,
   FaExclamationCircle,
@@ -33,7 +34,7 @@ export const lightOrDarkColor = (
     return Math.pow((col + 0.055) / 1.055, 2.4);
   });
   const L = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2];
-  return L > 0.3 ? darkColor : lightColor;
+  return L > 0.179 ? darkColor : lightColor;
 };
 
 export const ratioPadding = ratio => {
@@ -44,6 +45,20 @@ export const ratioPadding = ratio => {
   const [width, height] = ratio.split('x');
   const value = (height / width) * 100;
   return `${value}%`;
+};
+
+export const contrastLevelAndCompliance = (bg, fg) => {
+  // Only dealing with two colors, so just need the first result and combo
+  const info = first(
+    get(first(colorable({ bg, fg }, { compact: true })), 'combinations')
+  );
+  const roundedContrast = info.contrast.toFixed(2);
+  const level = info.accessibility.aaa
+    ? 'AAA'
+    : info.accessibility.aa
+    ? 'AA'
+    : 'FAIL';
+  return `${roundedContrast} ${level}`;
 };
 
 export const renderIcon = (status: string): JSX.Element => {

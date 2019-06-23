@@ -1,11 +1,10 @@
 import * as React from 'react';
-
 import { storiesOf } from '@storybook/react';
-
+import { StoryContainer, StoryHeader } from '../../utils/stories';
 import Paragraph from './Paragraph';
 import EyebrowText from './EyebrowText';
 import Heading from './Heading';
-import { Box, Card } from '../../primitives';
+import { Card } from '../../primitives';
 
 const content = (
   <>
@@ -85,15 +84,14 @@ const content = (
 );
 
 storiesOf('Elements/Typography', module)
+  .addDecorator(StoryContainer)
   .add('Typography Example', () => (
-    <Box width={1 / 2} margin="auto" pt={4}>
-      {content}
-    </Box>
-  ))
-  .add('Basic Example on Card', () => (
-    <Box bg="gray.4" p={4}>
-      <Card width={2 / 3} m="auto">
-        {content}
-      </Card>
-    </Box>
+    <>
+      <StoryHeader
+        heading="Typography"
+        subHeading="Typographic Elements Example"
+        text="This Component comes with three elements, to control headings, copy text, and eyebrow text."
+      />
+      <Card>{content}</Card>
+    </>
   ));

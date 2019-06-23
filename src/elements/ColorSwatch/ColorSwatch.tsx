@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import copy from 'copy-to-clipboard';
+import {
+  lightOrDarkColor,
+  contrastLevelAndCompliance,
+} from '../../utils/theme';
 import { Card, Box, Text } from '../../primitives';
-import { lightOrDarkColor } from '../../utils/theme';
 
 const Swatch = styled(Card)`
   position: relative;
@@ -19,8 +22,7 @@ const Swatch = styled(Card)`
     transform: scale(1.3);
     z-index: 1000;
     box-shadow: ${({ theme }) => theme.shadows.large};
-    color: ${({ theme, bg }) =>
-      lightOrDarkColor(bg, theme.colors.white, theme.colors.gray[0])};
+    color: ${({ bg }) => lightOrDarkColor(bg)};
   }
 `;
 
@@ -39,6 +41,7 @@ const Title = styled(Box)`
 `;
 
 function ColorSwatch({ color, name }) {
+  const a11yInfo = contrastLevelAndCompliance(color, lightOrDarkColor(color));
   return (
     <Swatch
       bg={color}
@@ -49,8 +52,17 @@ function ColorSwatch({ color, name }) {
         copy(color);
       }}
     >
-      <HexCode textStyle="eyebrow" fontSize={4}>
+      <HexCode
+        textStyle="eyebrow"
+        fontSize={3}
+        textAlign="center"
+        lineHeight={1}
+      >
         {color}
+        <br />
+        <Text as="span" fontSize={1}>
+          {a11yInfo}
+        </Text>
       </HexCode>
       <Title p={2} bg="white">
         <Text textStyle="eyebrow" fontSize={0} color="gray.0">

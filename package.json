@@ -9,6 +9,7 @@
     "@types/react-dom": "16.8.4",
     "@types/styled-components": "^4.1.16",
     "@types/styled-system": "^4.2.1",
+    "colorable": "^1.0.5",
     "copy-to-clipboard": "^3.2.0",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
