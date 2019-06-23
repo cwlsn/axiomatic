@@ -20,17 +20,21 @@ storiesOf('Elements/ColorSwatch', module).add('Colors', () => (
       const value = defaultTheme.colors[color];
       if (Array.isArray(value)) {
         return (
-          <Flex flexDirection="column" pb={4}>
+          <Flex flexDirection="column" pb={4} key={color}>
             <Typography.EyebrowText>{color}</Typography.EyebrowText>
             <Flex mt={2}>
               {value.map((subColor, i) => (
-                <ColorSwatch color={subColor} name={`${color}.${i}`} />
+                <ColorSwatch
+                  color={subColor}
+                  name={`${color}.${i}`}
+                  key={`${color}.${i}`}
+                />
               ))}
             </Flex>
           </Flex>
         );
       }
-      return <ColorSwatch color={value} name={color} />;
+      return <ColorSwatch color={value} name={color} key={color} />;
     })}
   </Flex>
 ));

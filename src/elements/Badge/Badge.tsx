@@ -20,6 +20,7 @@ function Badge({ children, bg = 'primary.1' }) {
       color={lightOrDarkColor(bg)}
       px={2}
       py={1}
+      as="span"
     >
       <ShadowText
         as="span"

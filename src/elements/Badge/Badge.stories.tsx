@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { storiesOf } from '@storybook/react';
-import { Text, Box, Card } from '../../primitives';
+import { Box, Card } from '../../primitives';
 import { Typography } from '../../elements';
 import Badge from './Badge';
 
