@@ -18,7 +18,7 @@ export default create({
     'SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace!important',
 
   // Text colors
-  textColor: 'white',
+  textColor: '#aaa',
   textInverseColor: '#333',
 
   // Toolbar default and active colors

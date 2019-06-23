@@ -26,10 +26,11 @@ const Item = styled(Flex)`
 
 export interface MenuItemProps {
   icon?: JSX.Element;
+  badge?: JSX.Element;
   title: string;
 }
 
-function MenuItem({ icon, title }: MenuItemProps) {
+function MenuItem({ icon, title, badge }: MenuItemProps) {
   return (
     <Item py={2} alignItems="center" borderRadius={0}>
       <Flex
@@ -42,7 +43,12 @@ function MenuItem({ icon, title }: MenuItemProps) {
           {icon}
         </Text>
       </Flex>
-      <Text lineHeight={1}>{title}</Text>
+      <Flex justifyContent="space-between" alignItems="center" width="100%">
+        <Text lineHeight={1} mr={2}>
+          {title}
+        </Text>
+        <Text mr={2}>{badge}</Text>
+      </Flex>
     </Item>
   );
 }

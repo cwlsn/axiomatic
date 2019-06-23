@@ -1,3 +1,5 @@
 import Typography from './Typography';
+import ColorSwatch from './ColorSwatch';
+import Badge from './Badge';
 
-export { Typography };
+export { Typography, ColorSwatch, Badge };

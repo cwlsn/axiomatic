@@ -2,7 +2,7 @@ const colors = {
   primary: ['#32235d', '#5F4B8B', '#8e77bb', '#c2b0e5', '#f3edff'],
   secondary: ['#00546d', '#00a1ad', '#60dce5', '#a5f8ff', '#edfdff'],
   danger: ['#c14141', '#ffe0e0'],
-  warning: ['#e0ca21', '#fcf8d9'],
+  warning: ['#e2c800', '#fcf8d9'],
   success: ['#60c140', '#edffe8'],
   info: ['#3998e5', '#eaf5ff'],
   gray: ['#23242e', '#56574f', '#9a9b90', '#c8c8c0', '#efefe9'],

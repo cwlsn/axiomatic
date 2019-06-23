@@ -1,5 +1,5 @@
-import { MouseEvent } from 'react';
-import styled from 'styled-components';
+import React, { MouseEvent } from 'react';
+import styled, { keyframes } from 'styled-components';
 import {
   fontWeight,
   borders,
@@ -13,6 +13,7 @@ import {
   ButtonStyleProps,
   variant,
 } from 'styled-system';
+import { FaSpinner } from 'react-icons/fa';
 import Box from '../Box';
 import { themed } from '../../utils/theme';
 
@@ -23,6 +24,7 @@ export interface CombinedButtonProps
     BorderRadiusProps,
     ButtonStyleProps {
   onClick?: MouseEvent;
+  disabled?: boolean;
 }
 
 export interface AdditionalButtonProps {
@@ -36,6 +38,18 @@ export interface AdditionalButtonProps {
 }
 
 const buttons = variant({ key: 'buttons' });
+
+const rotate = keyframes`
+  100% {
+    transform: rotate(360deg);
+  }
+`;
+
+const AnimFaSpinner = styled(FaSpinner)`
+  animation: ${rotate} 1.3s ease infinite;
+  font-size: 14px;
+  margin-right: ${({ theme }) => theme.space[2]}px;
+`;
 
 const Button = styled(Box).attrs<AdditionalButtonProps>(
   ({ as = 'button', borderRadius = 1, border = 1, variant = 'primary' }) => ({
@@ -57,6 +71,19 @@ const Button = styled(Box).attrs<AdditionalButtonProps>(
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+
+  &:disabled {
+    background: ${({ theme }) => theme.colors.gray[3]};
+    border-color: ${({ theme }) => theme.colors.gray[3]};
+    color: ${({ theme }) => theme.colors.gray[1]};
+    cursor: not-allowed;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors.gray[3]};
+      border-color: ${({ theme }) => theme.colors.gray[3]};
+      color: ${({ theme }) => theme.colors.gray[1]};
+    }
+  }
 
   ${fontWeight}
   ${borders}

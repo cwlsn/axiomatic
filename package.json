@@ -10,6 +10,7 @@
     "@types/styled-components": "^4.1.16",
     "@types/styled-system": "^4.2.1",
     "copy-to-clipboard": "^3.2.0",
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@storybook/addon-actions": "^5.1.8",
+    "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addon-links": "^5.1.8",
     "@storybook/addons": "^5.1.8",
     "@storybook/react": "^5.1.8",
