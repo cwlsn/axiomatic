@@ -36,6 +36,16 @@ export const lightOrDarkColor = (
   return L > 0.3 ? darkColor : lightColor;
 };
 
+export const ratioPadding = ratio => {
+  const ratioRegex = /([0-9])*x([0-9])*/;
+  if (!ratio.match(ratioRegex)) {
+    return '56.25%'; // 16:9
+  }
+  const [width, height] = ratio.split('x');
+  const value = (height / width) * 100;
+  return `${value}%`;
+};
+
 export const renderIcon = (status: string): JSX.Element => {
   // This is a weird workaround
   switch (status) {
