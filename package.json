@@ -27,10 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s ./public",
+    "eslint": "eslint ./src/**/*.{ts,tsx}",
     "build-storybook": "build-storybook -c .storybook"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -55,11 +53,29 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "8.0.6",
     "babel-plugin-styled-components": "^1.10.0",
+    "husky": ">=1",
     "jest-styled-components": "^6.3.3",
+    "lint-staged": ">=8",
+    "prettier": "^1.18.2",
     "storybook-addon-styled-component-theme": "^1.2.3",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-processor-styled-components": "^1.8.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "./src/**/*.{ts,tsx}": [
+      "eslint --fix ./src/**/*.{ts,tsx}",
+      "prettier --write",
+      "git add"
+    ]
   }
 }
