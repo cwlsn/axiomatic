@@ -5,5 +5,6 @@ import Flex from './Flex';
 import Image from './Image';
 import Link from './Link';
 import Text from './Text';
+import GlobalStyle from './GlobalStyle';
 
-export { Box, Button, Card, Flex, Image, Link, Text };
+export { Box, Button, Card, Flex, Image, Link, Text, GlobalStyle };

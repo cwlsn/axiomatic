@@ -1,9 +1,5 @@
 import { configure, addDecorator } from '@storybook/react';
-import { withThemesProvider } from 'storybook-addon-styled-component-theme';
-import defaultTheme from '../src/themes/default';
-import './reset.css';
-
-const themes = [defaultTheme];
+import { ThemeAndGlobalProvider } from '../src/utils/stories';
 
 const req = require.context('../src', true, /\.stories\.tsx$/);
 
@@ -28,6 +24,6 @@ function loadStories() {
     .forEach(filename => req(filename));
 }
 
-addDecorator(withThemesProvider(themes));
+addDecorator(ThemeAndGlobalProvider);
 
 configure(loadStories, module);
