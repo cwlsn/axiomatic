@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { Box } from '../../primitives';
 import StatusBanner from './StatusBanner';
 
-storiesOf('Patterns/StatusBanner', module).add('Each Status', () => (
+storiesOf('Patterns|StatusBanner', module).add('Each Status', () => (
   <Box p={4} bg="white">
     <StatusBanner
       status="info"

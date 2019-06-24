@@ -83,7 +83,7 @@ const content = (
   </>
 );
 
-storiesOf('Elements/Typography', module)
+storiesOf('Elements|Typography', module)
   .addDecorator(StoryContainer)
   .add('Typography Example', () => (
     <>

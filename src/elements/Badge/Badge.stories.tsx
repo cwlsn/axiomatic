@@ -5,7 +5,7 @@ import { Card } from '../../primitives';
 import { Typography } from '../../elements';
 import Badge from './Badge';
 
-storiesOf('Elements/Badge', module)
+storiesOf('Elements|Badge', module)
   .addDecorator(StoryContainer)
   .add('Badge Examples', () => (
     <>

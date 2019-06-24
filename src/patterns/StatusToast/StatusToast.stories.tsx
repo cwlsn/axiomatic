@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { Box } from '../../primitives';
 import StatusToast from './StatusToast';
 
-storiesOf('Patterns/StatusToast', module).add('Each Status', () => (
+storiesOf('Patterns|StatusToast', module).add('Each Status', () => (
   <Box p={4} bg="white">
     <StatusToast status="info" message="Hey cats, its kay!" />
     <StatusToast

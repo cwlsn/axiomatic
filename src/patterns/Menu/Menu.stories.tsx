@@ -6,7 +6,7 @@ import { Badge } from '../../elements';
 
 import Menu, { MenuItem, Separator } from './Menu';
 
-storiesOf('Patterns/Menu', module).add('Basic Menu', () => (
+storiesOf('Patterns|Menu', module).add('Basic Menu', () => (
   <Box p={4} bg="gray.4">
     <Menu open>
       <MenuItem

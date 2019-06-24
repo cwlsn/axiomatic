@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { Box } from '../../primitives';
 import ActionBanner from './ActionBanner';
 
-storiesOf('Patterns/ActionBanner', module)
+storiesOf('Patterns|ActionBanner', module)
   .add('Basic ActionBanner', () => (
     <Box p={4} bg="gray.4">
       <ActionBanner

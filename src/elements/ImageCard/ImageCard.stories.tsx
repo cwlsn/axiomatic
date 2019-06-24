@@ -6,7 +6,7 @@ import { Box, Card, Text } from '../../primitives';
 import { Typography } from '../../elements';
 import ImageCard from './ImageCard';
 
-storiesOf('Elements/ImageCard', module)
+storiesOf('Elements|ImageCard', module)
   .addDecorator(withKnobs)
   .addDecorator(StoryContainer)
   .add('ImageCard Example', () => (

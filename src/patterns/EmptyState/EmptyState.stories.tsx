@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import { Box, Card } from '../../primitives';
 import EmptyState from './EmptyState';
 
-storiesOf('Patterns/EmptyState', module)
+storiesOf('Patterns|EmptyState', module)
   .add('Basic EmptyState', () => (
     <Box p={4} bg="gray.4">
       <EmptyState

@@ -1,23 +1,33 @@
-import { configure, addDecorator, addParameters } from '@storybook/react';
+import { configure, addDecorator } from '@storybook/react';
 import { withThemesProvider } from 'storybook-addon-styled-component-theme';
 import defaultTheme from '../src/themes/default';
-import sbTheme from './theme.js';
 import './reset.css';
 
 const themes = [defaultTheme];
 
 const req = require.context('../src', true, /\.stories\.tsx$/);
 
+// Wrangle Storybook sorting
+const sortRanking = {
+  patterns: 1,
+  elements: 2,
+  primitives: 3,
+};
+
+const sortByFileName = (a, b) => {
+  // Each filename is ./thing/etc/etc
+  const aVal = sortRanking[a.split('/')[1]];
+  const bVal = sortRanking[b.split('/')[1]];
+  return aVal - bVal;
+};
+
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  req
+    .keys()
+    .sort(sortByFileName)
+    .forEach(filename => req(filename));
 }
 
 addDecorator(withThemesProvider(themes));
-
-addParameters({
-  options: {
-    theme: sbTheme,
-  },
-});
 
 configure(loadStories, module);

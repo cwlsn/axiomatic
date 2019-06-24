@@ -9,7 +9,7 @@ import ColorSwatch from './ColorSwatch';
 // Colors object for mapping
 const keys = Object.keys(defaultTheme.colors);
 
-storiesOf('Elements/ColorSwatch', module)
+storiesOf('Elements|ColorSwatch', module)
   .addDecorator(StoryContainer)
   .add('Color Viewer', () => (
     <>

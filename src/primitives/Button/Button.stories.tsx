@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 import Button from './Button';
 
-storiesOf('Primitives/Button', module)
+storiesOf('Primitives|Button', module)
   .addDecorator(withKnobs)
   .add('Default (Primary) Button', () => <Button>Kay!</Button>)
   .add('Outline Button', () => <Button variant="outline">Kay!</Button>)
