@@ -57,7 +57,6 @@
     "jest-styled-components": "^6.3.3",
     "lint-staged": ">=8",
     "prettier": "^1.18.2",
-    "storybook-addon-styled-component-theme": "^1.2.3",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
     "stylelint-config-styled-components": "^0.1.1",
