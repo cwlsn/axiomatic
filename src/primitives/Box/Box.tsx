@@ -8,6 +8,7 @@ import {
   borderColor,
   borderRadius,
   display,
+  fontSize,
   SpaceProps,
   WidthProps,
   ColorProps,
@@ -17,6 +18,7 @@ import {
   BorderRadiusProps,
   Theme,
   DisplayProps,
+  FontSizeProps,
 } from 'styled-system';
 import { themed } from '../../utils/theme';
 
@@ -28,7 +30,8 @@ export type CombinedBoxProps = Theme &
   BordersProps &
   BorderColorProps &
   BorderRadiusProps &
-  DisplayProps;
+  DisplayProps &
+  FontSizeProps;
 
 const Box = styled.div<CombinedBoxProps>`
   font-family: ${({ theme }) => theme.fonts.serif};
@@ -40,6 +43,7 @@ const Box = styled.div<CombinedBoxProps>`
   ${width}
   ${color}
   ${textAlign} 
+  ${fontSize}
   ${themed('Box')}
 `;
 

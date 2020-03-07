@@ -46,8 +46,8 @@ const Button = styled(Box).attrs<AdditionalButtonProps>(
     variant,
     px: 3,
     py: 2,
-    fontSize: 2,
-  })
+    fontSize: 1,
+  }),
 )<CombinedButtonProps>`
   appearance: none;
   display: inline-block;

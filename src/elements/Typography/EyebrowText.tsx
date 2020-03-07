@@ -6,7 +6,7 @@ function EyebrowText({ children }) {
     <Text
       fontSize={1}
       lineHeight={1}
-      mb={0}
+      mb={2}
       textStyle="eyebrow"
       color="gray.2"
       as="h4"

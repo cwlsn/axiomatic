@@ -1,16 +1,16 @@
 const colors = {
-  primary: ['#32235d', '#5F4B8B', '#8e77bb', '#c2b0e5', '#f3edff'],
+  primary: ['#E84D4D', '#FC6A6A', '#FC9090', '#FFAEAE', '#FFD8D8'],
   secondary: ['#00546d', '#00a1ad', '#60dce5', '#a5f8ff', '#edfdff'],
   danger: ['#c14141', '#ffe0e0'],
   warning: ['#e2c800', '#fcf8d9'],
   success: ['#60c140', '#edffe8'],
   info: ['#3998e5', '#eaf5ff'],
-  gray: ['#23242e', '#56574f', '#9a9b90', '#c8c8c0', '#efefe9'],
+  gray: ['#222', '#444', '#888', '#aaa', '#f1f1f1'],
   white: '#ffffff',
   black: '#000000',
 };
 
-const fontSizes = [12, 14, 16, 20, 24, 32, 48, 64];
+const fontSizes = [12, 14, 16, 20, 26, 36, 48, 64];
 
 const lineHeights = [1, 1.15, 1.5, 2];
 
@@ -19,11 +19,11 @@ const defaultTheme = {
   fontSizes,
   lineHeights,
   breakpoints: ['40em', '52em', '64em'],
-  radii: [2, 6, 8, 999],
+  radii: [0, 3, 8, 999],
   space: [0, 4, 8, 16, 32, 64, 128, 256],
   fonts: {
     serif:
-      'Maven Pro,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol',
+      'Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol',
     mono:
       'SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace!important',
   },
@@ -35,13 +35,13 @@ const defaultTheme = {
   textStyles: {
     eyebrow: {
       textTransform: 'uppercase',
-      letterSpacing: '0.03em',
+      letterSpacing: '0.02em',
       fontWeight: 'bold',
     },
     h1: {
       fontSize: fontSizes[5],
       lineHeight: lineHeights[0],
-      color: colors.primary[0],
+      color: colors.gray[1],
     },
     h2: {
       fontSize: fontSizes[4],

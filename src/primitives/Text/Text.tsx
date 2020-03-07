@@ -5,7 +5,6 @@ import {
   textAlign,
   lineHeight,
   letterSpacing,
-  fontSize,
   fontStyle,
   textStyle,
   FontFamilyProps,
@@ -13,7 +12,6 @@ import {
   TextAlignProps,
   LetterSpacingProps,
   FontWeightProps,
-  FontSizeProps,
   FontStyleProps,
   TextStyleProps,
 } from 'styled-system';
@@ -26,7 +24,6 @@ export interface CombinedTextProps
     TextAlignProps,
     LineHeightProps,
     LetterSpacingProps,
-    FontSizeProps,
     FontStyleProps,
     TextStyleProps {
   children: any;
@@ -38,7 +35,6 @@ export interface ATextProps {
 }
 
 const Text = styled(Box).attrs<ATextProps>({ as: 'p' })<CombinedTextProps>`
-  ${fontSize}
   ${fontStyle}
   ${fontFamily}
   ${fontWeight}
