@@ -11,7 +11,7 @@
     "@types/styled-system": "^4.2.1",
     "colorable": "^1.0.5",
     "copy-to-clipboard": "^3.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",
